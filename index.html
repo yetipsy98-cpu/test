@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scam With Your Friends · 网页同人原型</title><link rel="stylesheet" href="./src/style.css"></head>
+<body>
+<header><a class="brand" href="./">▧ <span>离谱来电<small>SCAM WITH YOUR FRIENDS</small></span></a><span class="tag">网页版同人原型</span><button id="sound">音效：开</button></header>
+<main>
+<section class="intro"><div><div class="eyebrow"><i></i> NIGHT SHIFT · <span id="day-number">001</span></div><h1>今晚，也要<span>准时下班。</span></h1><p>经营荒诞电话中心，搞定 AI 来电者，在老板的绩效考核下生存。</p></div><button id="help" class="secondary">操作指南 ↗</button></section>
+<section class="game-shell">
+<div class="toolbar"><div><span class="live-dot"></span><b id="mode-label">本地单人</b><span class="divider">/</span><span>诈骗电话中心</span></div><div><span>SHIFT REMAINING</span><b id="timer">02:00</b><button id="pause" title="暂停">Ⅱ</button></div></div>
+<div class="play-area"><canvas id="game" width="1100" height="650" aria-label="办公室游戏场景"></canvas><div id="prompt"></div><div id="toast" role="status"></div>
+<section id="call-panel" class="call-panel hidden" aria-live="polite"></section><div id="overlay" class="overlay"><div class="modal"><div class="eyebrow">WELCOME TO THE NIGHT SHIFT</div><h2 id="modal-title">老板说：今天必须达标。</h2><p id="modal-copy">在 120 秒内接听 AI 来电，用离谱故事争取信任。<br>赚到 ¥1,000 通过考核。别把老板惹怒了。</p><div id="mode-picker"><button class="mode active" data-players="1">01 <b>独自加班</b><small>WASD 移动 · E 交互</small></button><button class="mode" data-players="2">02 <b>同屏搭档</b><small>方向键移动 · Enter 交互</small></button></div><button id="start" class="primary">开始夜班 <span>↗</span></button><small class="footnote">据官方玩法介绍制作 · 脚本 AI · 本地同屏双人</small></div></div>
+</div>
+<div class="bottom-bar"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动 <kbd>E</kbd> 交互 <kbd>空格</kbd> 捣乱</span><span id="status">等待开始营业</span><span><kbd>ESC</kbd> 暂停</span></div>
+</section>
+<section class="dashboard"><article><span class="eyebrow">REVENUE / 营业额</span><strong id="money">¥ 0</strong><small id="goal-copy">本日目标 ¥1,000 · 荒诞来电，虚构货币</small></article><article><span class="eyebrow">SUCCESS / 成功来电</span><strong id="delivered">00 <em>通来电</em></strong><small>接听电话 → 选择说辞 → 争取信任</small></article><article class="orders"><span class="eyebrow">BOSS MOOD / 老板怒气</span><div id="tasks">怒气 0 / 100 · 老板正在盯着你。</div></article></section>
+<footer><span>所有来电者均为虚构 AI 角色 · 仅供游戏娱乐</span><span>EARLY PROTOTYPE — V0.1</span></footer>
+</main><div id="touch-controls"><button data-key="w">↑</button><div><button data-key="a">←</button><button data-key="s">↓</button><button data-key="d">→</button><button data-key="e">交互</button><button data-key=" ">捣乱</button></div></div>
+<script type="module" src="./src/game.js"></script></body></html>
